@@ -16,3 +16,10 @@ results = cursor.fetchall()
 for result in results:
     print(result)
 
+print('The smallest zipcode number in zipcodes_two is:')
+cursor = db.cursor()
+cursor.execute("SELECT Zipcode FROM zipcodes_two.zipcodes_two ORDER BY Zipcode ASC LIMIT 1")
+results = cursor.fetchall()
+for result in results:
+    print(result)
+
