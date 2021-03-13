@@ -1,3 +1,6 @@
+# This code query first 10 , last 10 , the smallest and the largest zip code from
+# Zip_code database. I worked in group of my classmates: Saeid, Mohammed, Luma, Abdi,
+# Dorin, and Igor.
 import pymysql
 
 db = pymysql.connect(host="192.168.2.7", port=4000, user="maxuser", passwd="maxpwd")
