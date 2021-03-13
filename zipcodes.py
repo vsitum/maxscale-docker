@@ -9,3 +9,10 @@ results = cursor.fetchall()
 for result in results:
     print(result)
 
+print('The largest zipcode number in zipcodes_one is:')
+cursor = db.cursor()
+cursor.execute("SELECT Zipcode FROM zipcodes_one.zipcodes_one ORDER BY Zipcode DESC LIMIT 1;")
+results = cursor.fetchall()
+for result in results:
+    print(result)
+
