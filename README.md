@@ -33,7 +33,7 @@ To install Mariadb:
 
 ## **MaxScale docker-compose setup**
 
- After forking Zohan/maxscale-docker I cloned maxscale-docker from my repository with command:
+ Fork Zohan/maxscale-docker and clone maxscale-docker from my repository with command:
 
 	git clone https://github.com/vsitum/maxscale-docker.git   
 
@@ -88,7 +88,7 @@ on the  machine :
 		+--------------------+
 		5 rows in set (0.001 sec)
 
-The cluster is configured to utilize automatic failover. To illustrate this you can stop the master container and watch for maxscale to failover to one of the original slaves and then show it rejoining after recovery:
+The cluster is configured to utilize automatic failover. To illustrate this you can stop the master container and watch for maxscale to failover to the original slave and then show it rejoining after recovery:
 
 	sudo docker-compose stop master
 	Stopping maxscale_master_1 ... done
