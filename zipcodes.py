@@ -1,6 +1,6 @@
-# This code query first 10 , last 10 , the smallest and the largest zip code from
-# Zip_code database. I worked in group of my classmates: Saeid, Mohammed, Luma, Abdi,
-# Dorin, and Igor.
+# This code query first 10 , last 10 , the smallest and the largest zip codes from
+# Zip_code.csv database sharded on two servers. I worked in group of my classmates: Saeid,
+# Mohammed, Luma, Abdi, and Igor.
 import pymysql
 
 db = pymysql.connect(host="192.168.2.7", port=4000, user="maxuser", passwd="maxpwd")
@@ -8,6 +8,12 @@ cursor = db.cursor()
 
 print('The last 10 rows of zipcodes_one are:')
 cursor.execute("SELECT * FROM zipcodes_one.zipcodes_one LIMIT 9990,10;")
+results = cursor.fetchall()
+for result in results:
+    print(result)
+
+print('The first 10 rows of zipcodes_two are:')
+cursor.execute("SELECT * FROM zipcodes_two.zipcodes_two LIMIT 10")
 results = cursor.fetchall()
 for result in results:
     print(result)
@@ -26,9 +32,5 @@ results = cursor.fetchall()
 for result in results:
     print(result)
 
-print('The first 10 rows of zipcodes_two are:')
-cursor.execute("SELECT * FROM zipcodes_two.zipcodes_two LIMIT 10")
-results = cursor.fetchall()
-for result in results:
-    print(result)
+
 
