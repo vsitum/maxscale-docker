@@ -33,12 +33,12 @@ To install Mariadb:
 
 ## **MaxScale docker-compose setup**
 
- Fork Zohan/maxscale-docker and clone maxscale-docker from my repository with command:
+ Fork **Zohan/maxscale-docker** and **clone maxscale-docker** from my repository with command:
 
 	git clone https://github.com/vsitum/maxscale-docker.git   
 
 
-To bring the containers up, navigate to maxscale-docker/maxscale/ directory and run command:
+To bring the containers up, navigate to **maxscale-docker/maxscale/** directory and run command:
 
  	docker-compose up -d
 
@@ -61,7 +61,7 @@ To make sure MariaDB MaxScale is ready accepting client connections and route qu
 	│ zip_master_two │ master2 │ 3306 │ 0           │ Running         │ 0-3000-31 │
 	└────────────────┴─────────┴──────┴─────────────┴─────────────────┴───────────┘
 
-The user maxuser with the password maxpwd can be used to test the cluster. Assuming the mariadb client is installed 
+The user **maxuser** with the password **maxpwd** can be used to test the cluster. Assuming the mariadb client is installed 
 on the  machine :
 
 	mysql -umaxuser -pmaxpwd -h 127.0.0.1 -P 4000
@@ -117,7 +117,7 @@ The cluster is configured to utilize automatic failover. To illustrate this you 
 
 ## **Running**
 
-After running python script zipcodes.py the output is shown below:
+After running python script **zipcodes.py** the output is shown below:
 
 	The last 10 rows of zipcodes_one are:
 	(40843, 'STANDARD', 'HOLMES MILL', 'KY', 'PRIMARY', '36.86', '-83', 'NA-US-KY-HOLMES MILL', 'FALSE', '', '', '')
@@ -164,4 +164,4 @@ Once complete, to remove the cluster and maxscale containers:
   
 	https://mariadb.com/kb/en/mariadb-maxscale-25-simple-sharding-with-two-servers
   
-	https://www.digitalocean.com/community/tutorials/how-to-store-and-retrieve-data-in-mariadb-using-python-on-          ubuntu-18-04 
+	https://www.digitalocean.com/community/tutorials/how-to-store-and-retrieve-data-in-mariadb-using-python-on-ubuntu-18-04 
